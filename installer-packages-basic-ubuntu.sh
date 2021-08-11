@@ -44,7 +44,8 @@ apt-get install -y bash bash-completion
 apt-get install -y ca-certificates tzdata
 apt-get install -y sudo dpkg apt-transport-https openssh-client
 apt-get install -y binutils dnsutils bridge-utils util-linux inetutils-traceroute net-tools
-apt-get install -y curl wget grep sed rsync socat netcat htop nano
+apt-get install -y curl wget grep sed rsync socat netcat nano
+apt-get install -y htop nmon sysbench p7zip-full iperf3 fio
 apt-get install -y tar gzip bzip2 xz-utils zip unzip
 apt-get install -y build-essential
 apt-get install -y python3 python3-dev
