@@ -31,7 +31,7 @@ printHeader;
 echo "=================================================="
 echo "==> Add Backport source"
 echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/backport.list
-cat /etc/apt/source.list.d/backport.list
+cat /etc/apt/sources.list.d/backport.list
 echo "--------------------------------------------------"
 sleep 2
 
