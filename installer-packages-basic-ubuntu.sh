@@ -48,16 +48,17 @@ sleep 2
 printHeader
 echo "=================================================="
 echo "==> Install Packages"
-apt-get install -y bash bash-completion 
-apt-get install -y ca-certificates tzdata
-apt-get install -y sudo dpkg apt-transport-https openssh-client
-apt-get install -y binutils dnsutils bridge-utils util-linux inetutils-traceroute net-tools
-apt-get install -y curl wget grep sed rsync socat netcat nano
-apt-get install -y htop nmon sysbench p7zip-full iperf3 fio
-apt-get install -y tar gzip bzip2 xz-utils zip unzip
-apt-get install -y build-essential
-apt-get install -y python3 python3-dev
-apt-get install -y git git-flow
+apt-get -y install bash bash-completion
+apt-get -y install ca-certificates tzdata
+apt-get -y install sudo sed grep byobu lsb-release
+apt-get -y install curl wget rsync nano vim-tiny
+apt-get -y install tar gzip bzip2 xz-utils p7zip-full zip unzip
+apt-get -y install xfsprogs fdisk gdisk parted lvm2
+apt-get -y install binutils util-linux logrotate
+apt-get -y install dpkg dirmngr gnupg apt-transport-https software-properties-common
+apt-get -y install htop iftop iotop sysstat nmon
+apt-get -y install net-tools netcat socat dnsutils bridge-utils
+apt-get -y install inetutils-traceroute inetutils-ping openssh-client
 echo "--------------------------------------------------"
 sleep 2
 
