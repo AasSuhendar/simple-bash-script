@@ -23,7 +23,7 @@ function printHeader() {
 printHeader;
 echo "=================================================="
 echo "==> Change Working Directory"
-cd $CURRENT_DIR
+cd "$CURRENT_DIR"
 echo "--------------------------------------------------"
 sleep 2
 

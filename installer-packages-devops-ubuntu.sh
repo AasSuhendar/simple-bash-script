@@ -2,8 +2,8 @@
 
 goExit(){
 	echo -n "are you sure to exit ? (y/n) : "
-	read ans
-	if [ $ans = Y -o $ans = y ]
+	read -r ans
+	if [ "$ans" = Y -o "$ans" = y ]
 	then
 		echo "Keep Learning. Thanks you."
         sleep 2
@@ -13,12 +13,12 @@ goExit(){
 }
 
 anyKey(){
-	orig=`stty -g`;
+	orig=$(stty -g);
 	echo -e "Press any key to continue. \c";
 	stty -echo;
 	stty raw;
-	any=`dd if=/dev/tty bs=1 count=1 2>/dev/null`;
-	stty $orig	
+	any=$(dd if=/dev/tty bs=1 count=1 2>/dev/null);
+	stty "$orig"	
 }
 
 # Check Privileges
@@ -95,28 +95,28 @@ installDocker(){
 
 
 while :
-do
+    do
 
-printHeader
+    printHeader
 
-echo "Choose Package to Install"
-echo "+++++++++++++++++++++++++"
-echo "1. Install Ansible"
-echo "2. Install Terraform"
-echo "3. Install Docker"
-echo "0. Exit"
+    echo "Choose Package to Install"
+    echo "+++++++++++++++++++++++++"
+    echo "1. Install Ansible"
+    echo "2. Install Terraform"
+    echo "3. Install Docker"
+    echo "0. Exit"
 
-echo -e "Your option [1-5] : \c"
-read option
+    echo -e "Your option [1-5] : \c"
+    read -r option
 
-case $option in 
-	1|[aA])installAnsible;;
-	2|[tT])installTerraform;;
-	3|[dD])installDocker;;
-	0|[Ee])goExit;;
-	*);;
-esac
+    case $option in 
+        1|[aA])installAnsible;;
+        2|[tT])installTerraform;;
+        3|[dD])installDocker;;
+        0|[Ee])goExit;;
+        *);;
+    esac
 
-anyKey
+    anyKey
 done
 
