@@ -10,7 +10,7 @@ fi
 
 goReboot(){
 	echo -n "are you sure to reboot now ? (y/n) : "
-	read -r ans
+	read -re ans
 	if [ "$ans" = Y ] || [ "$ans" = y ]
 	then
 		echo "Host Rebooted"
