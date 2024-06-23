@@ -57,7 +57,7 @@ apt-get -y install xfsprogs fdisk gdisk parted lvm2
 apt-get -y install binutils util-linux logrotate
 apt-get -y install dpkg dirmngr gnupg apt-transport-https software-properties-common
 apt-get -y install htop iftop iotop sysstat nmon
-apt-get -y install net-tools netcat socat dnsutils bridge-utils
+apt-get -y install net-tools socat dnsutils bridge-utils
 apt-get -y install inetutils-traceroute inetutils-ping openssh-client
 echo "--------------------------------------------------"
 sleep 2
